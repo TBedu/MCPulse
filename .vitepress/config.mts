@@ -11,7 +11,7 @@ const vitePressOptions = {
   ],
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://mcpulse.tbedu.top'
+    hostname: 'https://www.mcpulse.top'
   },
   themeConfig: {
     // Theme related configurations.
@@ -42,7 +42,7 @@ const vitePressOptions = {
     ],
     footer: {
       message: '根据 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a> 发布。',
-      copyright: '版权所有 © 2025年起 <a href="https://mcpulse.tbedu.top" target="_blank">MCPulse</a>'
+      copyright: '版权所有 © 2025年起 <a href="https://www.mcpulse.top" target="_blank">MCPulse</a>'
     },
     editLink: {
       pattern: 'https://github.com/TBedu/MCPulse/edit/main/:path',
