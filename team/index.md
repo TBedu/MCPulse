@@ -1,4 +1,5 @@
 ---
+title: 团队
 layout: page
 ---
 <script setup>
@@ -15,6 +16,10 @@ const Technology = [
     name: '凛夜·星海',
     title: '站长',
     desc: '负责 MCPulse 官网的搭建、维护和运营，以及 MeowLand 服务器的管理和维护',
+        links: [
+      { icon: 'github', link: 'https://github.com/LinYe2406' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/1785035725' }
+    ]
   },
   {
     avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=2877181146&spec=640&img_type=jpg',

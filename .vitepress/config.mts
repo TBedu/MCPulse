@@ -7,7 +7,7 @@ const vitePressOptions = {
   title: "MCPulse",
   description: "动态活力联谊组织",
   head: [
-    ['link', { rel: 'icon', href: './img/logo.ico' }]
+    ['link', { rel: 'icon', href: '/img/logo.ico' }]
   ],
   lastUpdated: true,
   sitemap: {
@@ -28,12 +28,12 @@ const vitePressOptions = {
         timeStyle: 'medium'
       }
     },
-    logo: './img/MCPulse.png',
+    logo: '/img/MCPulse.png',
     nav: [
       { text: '主页', link: '/' },
-      { text: '公告', link: '/info/' },
+      { text: '规章制度', link: '/rules/' },
       { text: '成员服列表', link: '/servers/' },
-      { text: '组织专栏', link: '/press/' },
+      { text: '组织专栏', link: '/press/introduction/' },
       { text: '团队', link: '/team/' }
     ],
     socialLinks: [
@@ -100,17 +100,9 @@ export default defineConfig(
       useTitleFromFrontmatter: true,
       useFolderTitleFromIndexFile: true,
       useFolderLinkFromIndexFile: true,
-      sortMenusByFrontmatterOrder: true
+      sortMenusByFrontmatterOrder: true,
+      rootGroupText: '组织专栏',
+      collapsed: true
      }
-//     {
-//       documentRootPath: '/',
-//       scanStartPath: 'service',
-//       resolvePath: '/service/',
-//       useTitleFromFileHeading: true,
-//       useTitleFromFrontmatter: true,
-//       useFolderTitleFromIndexFile: true,
-//       useFolderLinkFromIndexFile: true,
-//       sortMenusByFrontmatterOrder: true
-//     }
   ])
 );

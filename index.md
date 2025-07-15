@@ -7,7 +7,7 @@ hero:
   text: "动态活力联谊组织"
   tagline: 动态活力联谊组织，为玩家提供动态活力的联谊活动
   image:
-    src: ./img/MCPulse.png
+    src: /img/MCPulse.png
     alt: MCPulse
   actions:
     - theme: brand
@@ -15,10 +15,10 @@ hero:
       link: /servers/
     - theme: alt
       text: 加入我们
-      link: /info/#join
+      link: /rules/#join
     - theme: alt
       text: 组织专栏
-      link: /press/
+      link: /press/introduction/
 
 features:
   - icon: 🎉
