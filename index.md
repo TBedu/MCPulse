@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: 组织专栏
       link: /press/introduction/
+    - theme: alt
+      text: 状态检测
+      link: http://1.94.43.80:3001/status/serverstatus
 
 features:
   - icon: 🎉
