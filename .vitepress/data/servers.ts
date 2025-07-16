@@ -22,10 +22,10 @@ export const serverVersions = ['互通','基岩版','1.21.X','1.21.4','1.21.3','
 export const servers: MinecraftServer[] = [
   {
     id: '1',
-    name: 'default',
+    name: 'test',
     type: '生存',
     version: '1.21.1',
-    icon: '/img/normal.png',
+    icon: '/img/default.png',
     description: ' 生存建筑 | 冒险探索 | 生电社交 | 养老摸鱼 ',
     link: 'https://qm.qq.com/q/8KQVFPSyA0',
     ip: 'mc.example.com'
