@@ -22,7 +22,7 @@ export const serverVersions = ['互通','基岩版','1.21.X','1.21.4','1.21.3','
 export const servers: MinecraftServer[] = [
   {
     id: '1',
-    name: 'test',
+    name: 'default',
     type: '生存',
     version: '1.21.1',
     icon: '/img/normal.png',
