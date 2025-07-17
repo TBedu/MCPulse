@@ -137,3 +137,5 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+@import "./style/var.css";
+@import "./style/blur.css";
