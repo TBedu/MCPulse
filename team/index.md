@@ -44,7 +44,7 @@ const Development = [
     name: '小山沂河',
     title: '审核',
     desc: '负责 MCPulse 服务器审核、评分等', 
-  }
+  },
   {
     avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1041965407&spec=640&img_type=jpg',
     name: 'JC.Tan',
