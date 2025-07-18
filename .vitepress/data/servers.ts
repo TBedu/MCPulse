@@ -26,7 +26,7 @@ export const servers: MinecraftServer[] = [
     type: '生存',
     version: '1.21.1',
     icon: '/img/default.png',
-    description: ' 生存建筑 | 冒险探索 | 生电社交 | 养老摸鱼 ',
+    description: ' 生存建筑 | 冒险探索 | 生电社交 | 养老摸鱼 呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃',
     link: 'https://qm.qq.com/q/8KQVFPSyA0',
     ip: 'mc.example.com'
   },
