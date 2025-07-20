@@ -45,7 +45,7 @@ export const servers: MinecraftServer[] = [
     name: 'BySide ',
     type: '生存',
     version: '1.21.1',
-    icon: '/img/default.jpg',
+    icon: '/img/default.png',
     description: '拥有生电生存小游戏合集的我的世界高版本服务器，服务器建设中，持续更新中......',
     link: 'https://qm.qq.com/q/S9wHA1N8IO',
     ip: 'mc.byside.top'
