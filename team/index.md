@@ -49,7 +49,7 @@ const Development = [
     avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1041965407&spec=640&img_type=jpg',
     name: 'JC.Tan',
     title: '组织发展策划',
-    desc: '负责 MCPulse 未来发展走向  门卫大爷兼CEO秘书', 
+    desc: '负责 MCPulse 未来发展走向 门卫大爷兼CEO秘书', 
   },
 ]
 
