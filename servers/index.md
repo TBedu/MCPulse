@@ -28,6 +28,9 @@ layout: page
         <div class="server-tags">
           <span class="server-type">{{ server.type }}</span>
           <span class="server-badge">{{ server.version }}</span>
+          <span class="server-status" :class="serverStatus[server.id]?.online ? 'online' : 'offline'">{{
+            serverStatus[server.id]?.online ? `在线: ${serverStatus[server.id]?.players?.online || 0}人` : '离线'
+          }}</span>
         </div>
       </div>
     </div>
@@ -52,7 +55,27 @@ export default {
       selectedVersion: '',
       servers: [],
       serverTypes: [],
-      serverVersions: []
+      serverVersions: [],
+      serverStatus: {}
+    }
+  },
+
+  methods: {
+    async fetchServerStatus(serverIp) {
+      if (!serverIp) return { online: false };
+      try {
+        const response = await fetch(`https://api.mcsrvstat.us/3/${encodeURIComponent(serverIp)}`);
+        return await response.json();
+      } catch (error) {
+        console.error('获取服务器状态失败:', error);
+        return { online: false };
+      }
+    },
+    async updateServerStatus(server) {
+      if (server.ip) {
+        const status = await this.fetchServerStatus(server.ip);
+        this.serverStatus[server.id] = status;
+      }
     }
   },
   computed: {
@@ -73,6 +96,7 @@ export default {
       // 提取唯一的类型和版本用于筛选选项
       this.serverTypes = [...new Set(this.servers.map(s => s.type))]
       this.serverVersions = [...new Set(this.servers.map(s => s.version))]
+      this.servers.forEach(server => this.updateServerStatus(server))
     })
   }
 }
@@ -325,6 +349,25 @@ body {
 .server-badge {
   background-color: rgba(18, 184, 134, 0.15);
   color: #0c925a;
+}
+
+.server-status {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.server-status.online {
+  background-color: rgba(72, 187, 120, 0.15);
+  color: #10b981;
+}
+
+.server-status.offline {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
 }
 
 .server-description {
