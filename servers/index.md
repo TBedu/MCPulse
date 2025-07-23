@@ -36,7 +36,7 @@ layout: page
     </div>
     <p class="server-description">{{ server.description }}</p>
     <div class="server-links">
-      <a :href="server.link" target="_blank" class="server-link">浏览网站</a>
+      <a :href="server.link" target="_blank" class="server-link">点击查看</a>
       <span v-if="server.ip" class="server-ip">地址: {{ server.ip }}</span>
     </div>
   </div>
