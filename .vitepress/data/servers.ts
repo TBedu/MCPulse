@@ -60,4 +60,14 @@ export const servers: MinecraftServer[] = [
     link: 'minecraft://?addExternalServer=starry-isles|starry-isles.play-mc.space:54875',
     ip: '150.138.79.19:54875'
   },
+  {
+    id: '5',
+    name: 'OriginsCraft',
+    type: '生存',
+    version: '1.21.7',
+    icon: '/icon/OriginsCraft.png',
+    description: '- OriginsCraft正版服是一个纯生存养老探索向的公益型（暂时的）插件服务器，是面向新时代的优秀社区环境和永不换挡的正版Minecraft服务器，服务器使用PURPUR核心进行运转和维护，使用简幻云购买的服务器，性能有保障，没有超开行为。（因部分原因此服务器运营商会经常被ddos攻击，望理解）- 本服目前拥有箱子锁、随机传送、死亡不掉落。服务器采用PURPUR端，服务器允许部分生电特性，但不推荐专业的生电玩家游玩此服务器。- 本服限制地图范围（半径3w），但可保证世界资源不会枯竭。服务器没有ban例如TNT、红石类型方块，只要你的行为不会对服务器造成卡顿即可随意使用。',
+    link: '',
+    ip: 'play.originscraft.top'
+  },
 ]
