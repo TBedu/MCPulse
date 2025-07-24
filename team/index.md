@@ -18,7 +18,7 @@ const Technology = [
     desc: '负责 MCPulse 官网的搭建、维护和运营，以及 MeowLand 服务器的管理和维护',
         links: [
       { icon: 'github', link: 'https://github.com/LinYe2406' },
-      { icon: 'bilibili', link: 'https://space.bilibili.com/1785035725' }
+      { icon: 'bilibili', link: 'https://space.bilibili.com/1785035725' },
       { icon: 'qq', link: 'https://qm.qq.com/q/YMtBnyqI4E' }
     ]
   },
