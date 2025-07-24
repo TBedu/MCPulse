@@ -19,6 +19,7 @@ const Technology = [
         links: [
       { icon: 'github', link: 'https://github.com/LinYe2406' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/1785035725' }
+      { icon: 'qq', link: 'https://qm.qq.com/q/YMtBnyqI4E' }
     ]
   },
   {
@@ -40,16 +41,16 @@ const Development = [
     desc: '负责 MCPulse 宣传图绘制等', 
   },
   {
-    avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=2734322452&spec=640&img_type=jpg',
-    name: '小山沂河',
-    title: '审核',
-    desc: '负责 MCPulse 服务器审核、评分等', 
-  },
-  {
     avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1041965407&spec=640&img_type=jpg',
     name: 'JC.Tan',
     title: '组织发展策划',
     desc: '负责 MCPulse 未来发展走向 门卫大爷兼CEO秘书', 
+  },
+  {
+    avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=3082308119&spec=640&img_type=jpg',
+    name: 'Алёша Лому',
+    title: '审核',
+    desc: '负责 MCPulse 服务器审核、评分等', 
   },
 ]
 
