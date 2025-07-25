@@ -359,12 +359,11 @@ body {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  margin-left: 0.5rem;
 }
 
 .server-status.online {
-  background-color: rgba(72, 187, 120, 0.15);
-  color: #10b981;
+  background-color: rgba(18, 184, 134, 0.15);
+  color: #0c925a;
 }
 
 .server-status.offline {
