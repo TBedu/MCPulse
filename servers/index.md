@@ -36,8 +36,8 @@ layout: page
     </div>
     <p class="server-description">{{ server.description }}</p>
     <div class="server-links">
+      <span v-if="server.ip && !server.hideIp" class="server-ip">{{ server.ip }}</span>
       <a :href="server.link" target="_blank" class="server-link">点击查看</a>
-      <span v-if="server.ip" class="server-ip">地址: {{ server.ip }}</span>
     </div>
   </div>
 </div>
@@ -61,10 +61,12 @@ export default {
   },
 
   methods: {
-    async fetchServerStatus(serverIp) {
-      if (!serverIp) return { online: false };
+    async fetchServerStatus(server) {
+      const { ip, bedrock } = server;
+      if (!ip) return { online: false };
       try {
-        const response = await fetch(`https://yun.tbedu.top:16666/3/${encodeURIComponent(serverIp)}`);
+        const baseUrl = bedrock ? 'https://yun.tbedu.top:16666/bedrock/3/' : 'https://yun.tbedu.top:16666/3/';
+        const response = await fetch(`${baseUrl}${encodeURIComponent(ip)}`);
         return await response.json();
       } catch (error) {
         console.error('获取服务器状态失败:', error);
@@ -73,7 +75,7 @@ export default {
     },
     async updateServerStatus(server) {
       if (server.ip) {
-        const status = await this.fetchServerStatus(server.ip);
+        const status = await this.fetchServerStatus(server);
         this.serverStatus[server.id] = status;
       }
     }
@@ -380,8 +382,7 @@ body {
 
 .server-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -394,7 +395,7 @@ body {
   transition: all 0.3s ease;
   text-align: center;
   background: linear-gradient(135deg, #4299e1, #3182ce);
-  flex: 1;
+  width: 100%;
   box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
 }
 
@@ -411,7 +412,7 @@ body {
   padding: 0.5rem 1rem;
   background-color: #edf2f7;
   border-radius: 8px;
-  flex: 1;
+  width: 100%;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
