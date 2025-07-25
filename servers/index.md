@@ -64,7 +64,7 @@ export default {
     async fetchServerStatus(serverIp) {
       if (!serverIp) return { online: false };
       try {
-        const response = await fetch(`https://api.mcsrvstat.us/3/${encodeURIComponent(serverIp)}`);
+        const response = await fetch(`https://yun.tbedu.top:16666/3/${encodeURIComponent(serverIp)}`);
         return await response.json();
       } catch (error) {
         console.error('获取服务器状态失败:', error);
