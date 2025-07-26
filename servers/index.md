@@ -28,9 +28,15 @@ layout: page
         <div class="server-tags">
           <span class="server-type">{{ server.type }}</span>
           <span class="server-badge">{{ server.version }}</span>
-          <span class="server-status" :class="serverStatus[server.id]?.online ? 'online' : 'offline'">{{
-            serverStatus[server.id]?.online ? `在线: ${serverStatus[server.id]?.players?.online || 0}人` : '离线'
+          <span class="server-status" :class="{
+            'checking': serverStatus[server.id]?.checking,
+            'online': serverStatus[server.id]?.online,
+            'offline': !serverStatus[server.id]?.online && !serverStatus[server.id]?.checking
+          }">{{
+            serverStatus[server.id]?.checking ? '检测中' :
+                      serverStatus[server.id]?.online ? `在线: ${serverStatus[server.id]?.players?.online || 0}人` : '离线'
           }}</span>
+          <span v-if="!server.bedrock && serverStatus[server.id]?.latency" class="server-latency">{{ serverStatus[server.id].latency }}ms</span>
         </div>
       </div>
     </div>
@@ -56,7 +62,7 @@ export default {
       servers: [],
       serverTypes: [],
       serverVersions: [],
-      serverStatus: {}
+      serverStatus: {},
     }
   },
 
@@ -75,8 +81,27 @@ export default {
     },
     async updateServerStatus(server) {
       if (server.ip) {
-        const status = await this.fetchServerStatus(server);
-        this.serverStatus[server.id] = status;
+        // 初始化状态为检测中
+        this.serverStatus[server.id] = { checking: true };
+        
+        try {
+          // 设置48秒超时
+          const timeoutPromise = new Promise((_, reject) => {
+            setTimeout(() => reject(new Error('timeout')), 48000);
+          });
+          
+          const status = await Promise.race([
+            this.fetchServerStatus(server),
+            timeoutPromise
+          ]);
+          
+          // API成功返回，清除检测中状态
+          status.checking = false;
+          this.serverStatus[server.id] = status;
+        } catch (error) {
+          // 错误或超时状态
+          this.serverStatus[server.id] = { online: false, checking: false };
+        }
       }
     }
   },
@@ -331,16 +356,17 @@ body {
 
 .server-tags {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.3rem;
   margin-top: 0.5rem;
   flex-wrap: wrap;
 }
 
 .server-type, .server-badge {
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
   font-weight: 500;
+  height: 1.6rem;
 }
 
 .server-type {
@@ -355,10 +381,11 @@ body {
 
 .server-status {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
   font-weight: 500;
+  height: 1.6rem;
 }
 
 .server-status.online {
@@ -369,6 +396,22 @@ body {
 .server-status.offline {
   background-color: rgba(239, 68, 68, 0.15);
   color: #ef4444;
+}
+
+.server-status.checking {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #c2410c;
+}
+
+.server-latency {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 1.6rem;
+  background-color: rgba(18, 184, 134, 0.15);
+  color: #0c925a;
 }
 
 .server-description {

@@ -3,6 +3,8 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
+@import "./style/var.css";
+
 /**
  * Colors
  *
@@ -136,6 +138,3 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
-
-@import "./style/var.css";
-@import "./style/blur.css";
