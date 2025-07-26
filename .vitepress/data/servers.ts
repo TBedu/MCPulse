@@ -82,4 +82,40 @@ export const servers: MinecraftServer[] = [
     bedrock: false,
     hideIp: false
   },
+  {
+    id: '6',
+    name: 'FurCraft',
+    type: '生存',
+    version: '1.21.5',
+    icon: '/icon/FurCraft.png',
+    description: '在方块世界中，与毛毛共绘未来',
+    link: 'https://furcraft.top/',
+    ip: 'play.furcraft.top:51727',
+    bedrock: false,
+    hideIp: false
+  },
+  {
+    id: '7',
+    name: 'RisingRealm',
+    type: '生存',
+    version: '1.20.4',
+    icon: '/icon/RisingRealm.jpg',
+    description: 'RisingRealm破晓疆域互通服务器。JAVA和基岩版都可以玩无需正版，互通原版生存，java版最高1.9-最低版本为 1.20.4 基岩版本1.20.60为了弥补手机玩家在操作上的不便，进服找管理额外获取10点最大生命值上限。所有辅助类MOD和插件都可以使用。',
+    link: '',
+    ip: 'mc.nswrz.xyz',
+    bedrock: false,
+    hideIp: false
+  },
+  {
+    id: '8',
+    name: 'ATCraftMC',
+    type: '生存',
+    version: '互通',
+    icon: '/icon/ATCraftMC.png',
+    description: 'ATCraftMC 是由一群志同道合的腐竹和玩家联合组成的集群服务器，秉持开放、包容、共享的理念，不断更新玩法和活动。多样玩法：从生存到创造、从原版到模组，满足各种游戏需求。稳定兼容：16核48G高配服务器，全国加速节点，支持 Java 与基岩版互通。安全可靠：自主开发的 Quark-Plugin 拦截超 300 起熊服事件，服务器稳定性高达 95%。',
+    link: 'https://atcraftmc.cn/',
+    ip: 'alt.atcraftmc.xyz',
+    bedrock: false,
+    hideIp: false
+  }
 ]

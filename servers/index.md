@@ -43,7 +43,7 @@ layout: page
     <p class="server-description">{{ server.description }}</p>
     <div class="server-links">
       <span v-if="server.ip && !server.hideIp" class="server-ip">{{ server.ip }}</span>
-      <a :href="server.link" target="_blank" class="server-link">点击查看</a>
+      <a v-if="server.link" :href="server.link" target="_blank" class="server-link">点击查看</a>
     </div>
   </div>
 </div>
@@ -118,8 +118,8 @@ export default {
   mounted() {
     // 从数据文件加载服务器列表
     import('../.vitepress/data/servers').then(module => {
-      // 按ID排序服务器列表
-      this.servers = module.servers.sort((a, b) => Number(a.id) - Number(b.id))
+      // 每次刷新随机排序服务器列表
+      this.servers = module.servers.sort(() => Math.random() - 0.5)
       // 提取唯一的类型和版本用于筛选选项
       this.serverTypes = [...new Set(this.servers.map(s => s.type))]
       this.serverVersions = [...new Set(this.servers.map(s => s.version))]
