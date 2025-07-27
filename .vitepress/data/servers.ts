@@ -53,7 +53,7 @@ export const servers: MinecraftServer[] = [
     version: '1.21.1',
     icon: '/icon/BySide.jpg',
     description: '拥有生电生存小游戏合集的我的世界高版本服务器，服务器建设中，持续更新中......',
-    link: 'https://qm.qq.com/q/S9wHA1N8IO',
+    link: 'https://www.byside.top',
     ip: 'mc.byside.top',
     bedrock: false,
     hideIp: false
@@ -92,7 +92,7 @@ export const servers: MinecraftServer[] = [
     link: 'https://furcraft.top/',
     ip: 'play.furcraft.top:51727',
     bedrock: false,
-    hideIp: false
+    hideIp: true
   },
   {
     id: '7',
