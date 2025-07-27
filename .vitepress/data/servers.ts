@@ -101,7 +101,7 @@ export const servers: MinecraftServer[] = [
     version: '1.20.4',
     icon: '/icon/RisingRealm.jpg',
     description: 'RisingRealm破晓疆域互通服务器。JAVA和基岩版都可以玩无需正版，互通原版生存，java版最高1.9-最低版本为 1.20.4 基岩版本1.20.60为了弥补手机玩家在操作上的不便，进服找管理额外获取10点最大生命值上限。所有辅助类MOD和插件都可以使用。',
-    link: '',
+    link: 'https://mc.nswrz.xyz/',
     ip: 'mc.nswrz.xyz',
     bedrock: false,
     hideIp: false
