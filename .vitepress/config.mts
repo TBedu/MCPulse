@@ -7,7 +7,9 @@ const vitePressOptions = {
   title: "MCPulse",
   description: "动态活力联谊组织",
   head: [
-    ['link', { rel: 'icon', href: '/img/logo.ico' }]
+    ['link', { rel: 'icon', href: '/img/logo.ico' }],
+    ['meta', { name: 'description', content: 'MCPulse是一个动态活力联谊组织，让每个服务器都能找到自己的 peers，为玩家提供动态活力的联谊活动' }],
+    ['meta', { name: 'keywords', content: 'MCPulse, 动态活力联谊组织, MCPulse组织, 集体宣传, 集宣, Minecraft, MC, 服务器, Minecraft服务器, MC服务器, 玩家联谊活动, 多元活动, 活跃氛围, 专业服务, 玩家交流, 玩家互动, 玩家合作, 玩家合作活动, 玩家合作组织, 玩家合作服务器, 玩家合作服务器活动, 玩家合作服务器组织, 玩家合作服务器活动组织' }]
   ],
   lastUpdated: true,
   sitemap: {
