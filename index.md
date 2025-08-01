@@ -21,7 +21,7 @@ hero:
       link: /press/introduction/
     - theme: alt
       text: 状态检测
-      link: http://1.94.43.80:3001/status/serverstatus
+      link: https://yun.tbedu.top:13001/status/mcpulse
 
 features:
   - icon: 🎉
