@@ -114,7 +114,7 @@ export const servers: MinecraftServer[] = [
     icon: '/icon/ATCraftMC.png',
     description: 'ATCraftMC 是由一群志同道合的腐竹和玩家联合组成的集群服务器，秉持开放、包容、共享的理念，不断更新玩法和活动。多样玩法：从生存到创造、从原版到模组，满足各种游戏需求。稳定兼容：16核48G高配服务器，全国加速节点，支持 Java 与基岩版互通。安全可靠：自主开发的 Quark-Plugin 拦截超 300 起熊服事件，服务器稳定性高达 95%。',
     link: 'https://atcraftmc.cn/',
-    ip: 'alt.atcraftmc.xyz',
+    ip: 'game.atcraftmc.xyz',
     bedrock: false,
     hideIp: false
   }
