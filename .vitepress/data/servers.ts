@@ -54,7 +54,7 @@ export const servers: MinecraftServer[] = [
     icon: '/icon/BySide.jpg',
     description: '拥有生电生存小游戏合集的我的世界高版本服务器，服务器建设中，持续更新中......',
     link: 'https://www.byside.top',
-    ip: 'mc.byside.top',
+    ip: 'nb1.byside.top',
     bedrock: false,
     hideIp: false
   },
