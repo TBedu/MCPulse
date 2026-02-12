@@ -109,12 +109,12 @@ export const servers: MinecraftServer[] = [
   {
     id: '8',
     name: 'ATCraftMC',
-    type: '生存',
-    version: '互通',
+    type: '生存','生电','创造','模组','小游戏','群组服',
+    version: '互通','1.20.1','1.21.1','1.19.4','1.18.2','1.17.1','1.16.5','1.14.4','1.12.2',
     icon: '/icon/ATCraftMC.png',
-    description: 'ATCraftMC 是由一群志同道合的腐竹和玩家联合组成的集群服务器，秉持开放、包容、共享的理念，不断更新玩法和活动。多样玩法：从生存到创造、从原版到模组，满足各种游戏需求。稳定兼容：16核48G高配服务器，全国加速节点，支持 Java 与基岩版互通。安全可靠：自主开发的 Quark-Plugin 拦截超 300 起熊服事件，服务器稳定性高达 95%。',
-    link: 'https://atcraftmc.cn/',
-    ip: 'game.atcraftmc.xyz',
+    description: 'ATCraftMC由一群志同道合的腐竹和玩家联合组成。我们有着从生存到创造，从原版到模组的多种玩法。无论探险，枪战，还是创造，设计，我们都有适合你的游戏内容。我们秉持着开放、包容、共享的理念，我们持续添加新的游戏玩法，以及激动人心的活动，为玩家提供新鲜刺激的游戏体验。',
+    link: 'https://atcraftmc.cn',
+    ip: 'game.atcraftmc.cn',
     bedrock: false,
     hideIp: false
   }
