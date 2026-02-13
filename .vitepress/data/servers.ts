@@ -40,7 +40,7 @@ export const servers: MinecraftServer[] = [
     type: '生存',
     version: '互通',
     icon: '/icon/X_Star.jpg',
-    description: '开设原版生存、原版城建、趣味小游戏。兼容JE1.8-1.21.7，BE最新。由 TBedu Network 旗下 X_Star 管理组 运营，是一个充满活力与创意的 Minecraft 群组服务器。',
+    description: '开设原版生存、原版城建、趣味小游戏。兼容JE1.13-1.21.11，BE最新。由 TBedu Network 旗下 X_Star 管理组 运营，是一个充满活力与创意的 Minecraft 群组服务器。',
     link: 'https://wiki.tbedu.top',
     ip: 'mc.tbedu.top',
     bedrock: false,
@@ -54,7 +54,7 @@ export const servers: MinecraftServer[] = [
     icon: '/icon/BySide.jpg',
     description: '拥有生电生存小游戏合集的我的世界高版本服务器，服务器建设中，持续更新中......',
     link: 'https://www.byside.top',
-    ip: 'nb1.byside.top',
+    ip: '2.nb.byside.top',
     bedrock: false,
     hideIp: false
   },
